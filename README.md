@@ -17,5 +17,11 @@ FetchContent_Declare(
 
 FetchContent_MakeAvailable(zlib-minimal)
 
+include_directories(${zlib-minimal_SOURCE_DIR})
+
+add_executable(your-project main.cpp)
+
 target_link_libraries(your_project zlib-minimal)
 ```
+
+The [zlib-minimal-test](https://github.com/camielverdult/zlib-minimal-test) repo holds an example of using zlib's functions and CMake usage.
