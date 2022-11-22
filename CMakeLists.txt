@@ -17,3 +17,5 @@ add_library(
 )
 
 target_include_directories(zlib-minimal PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+
+include_directories(${CMAKE_CURRENT_SOURCE_DIR})
