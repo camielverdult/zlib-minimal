@@ -16,4 +16,4 @@ add_library(
         zutil.c
 )
 
-target_include_directories(zlib-minimal PUBLIC .)
+target_include_directories(zlib-minimal PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
