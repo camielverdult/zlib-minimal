@@ -12,20 +12,7 @@
                      Avoid some compiler warnings for input and output buffers
  */
 
-#include <stdio.h>
-#include <string.h>
-#include <assert.h>
-#include "zlib.h"
-
-#if defined(MSDOS) || defined(OS2) || defined(WIN32) || defined(__CYGWIN__)
-#  include <fcntl.h>
-#  include <io.h>
-#  define SET_BINARY_MODE(file) setmode(fileno(file), O_BINARY)
-#else
-#  define SET_BINARY_MODE(file)
-#endif
-
-#define CHUNK 16384
+#include "zpipe.h"
 
 /* Compress from file source to file dest until EOF on source.
    def() returns Z_OK on success, Z_MEM_ERROR if memory could not be
