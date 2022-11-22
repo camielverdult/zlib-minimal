@@ -16,4 +16,4 @@ add_library(
         zutil.c
 )
 
-target_include_directories(zlib-minimal PRIVATE .)
+target_include_directories(zlib-minimal PUBLIC .)
